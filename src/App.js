@@ -1,48 +1,25 @@
 import "./App.css";
 import { About } from "./MyComponents/About";
-import React, { useState, useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./MyComponents/Home";
+import { Login } from "./MyComponents/Login";
+import { Register } from "./MyComponents/Register";
+import Product from "./MyComponents/Product";
+import Cart from "./MyComponents/Cart";
 
 function App() {
-  let initTodo;
-  if (localStorage.getItem("todos") === null) {
-    initTodo = [];
-  } else {
-    initTodo = JSON.parse(localStorage.getItem("todos"));
-  }
-
   return (
     <>
-    <Router>
-      <Routes>
-        {/* <Route exact path = "/login" element={<LogIn/>}></Route> */}
-        {/* <Route path = "/register" element={<Register/>}></Route> */}
-        <Route path = "/" element={<Home />}></Route>
-        <Route path = "/about" element={<About />}></Route>
-      </Routes>
-    </Router> 
-    {/* <Router>
-      <Headers title="your title here" searchBar={true} />
-      <Routes>
-            <Route exact path="/" render = {() => {
-              return (
-              <>
-              <Addtodo addTodo={addTodo} />
-              <Todos todos={todos} onDelete={onDelete} />
-              </>)
-            }}>
-            </Route>
-            <Route exact path="/about">
-              <About />
-            </Route>
+      <Router>
+        <Routes>
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/register" element={<Register />}></Route>
+          <Route path="/product" element={<Product />}></Route>
+          <Route path="/cart" element={<Cart />}></Route>
         </Routes>
-      <Footer />
-    </Router> */}
+      </Router>
     </>
   );
 }

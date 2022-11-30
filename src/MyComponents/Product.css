@@ -1,0 +1,12 @@
+.cardCss{
+    border-radius: 15px;
+}
+
+.imgCss{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.size{
+    width: 100%;
+}

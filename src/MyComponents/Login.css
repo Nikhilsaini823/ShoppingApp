@@ -1,0 +1,13 @@
+.bgcolor{
+    background-color: blue;
+}
+.textcolor{
+    color: red;
+}
+.pass-wrapper {
+    position: relative;
+    display: flex;
+    margin-bottom: 50px;
+    height: 30px;
+    width: 10%;
+  }
